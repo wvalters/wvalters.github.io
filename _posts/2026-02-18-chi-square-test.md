@@ -16,7 +16,7 @@ In this project we apply Chi-Square Test For Independence (a Hypothesis Test) to
 - [01. Concept Overview](#concept-overview)
 - [02. Data Overview & Preparation](#data-overview)
 - [03. Applying Chi-Square Test For Independence](#chi-square-application)
-- [04. Analysing The Results](#chi-square-results)
+- [04. Analyzing The Results](#chi-square-results)
 - [05. Discussion](#discussion)
 
 ___
@@ -32,7 +32,7 @@ For the campaign promoting the club, customers were put randomly into three grou
 - the second group received a high quality, high cost mailer
 - the third group were a control group, receiving no mailer at all.
 
-The grocery knows that customers who were contacted, signed up for the Delivery Club at a far higher rate than the control group, but now want to understand if there is a significant difference in signup rate between the cheap mailer and the expensive mailer.  This will allow them to make more informed decisions in the future, with the overall aim of optimising campaign ROI!
+The grocery knows that customers who were contacted, signed up for the Delivery Club at a far higher rate than the control group, but now want to understand if there is a significant difference in signup rate between the cheap mailer and the expensive mailer.  This will allow them to make more informed decisions in the future, with the overall aim of optimizing campaign ROI!
 
 ### Actions <a name="overview-actions"></a>
 
@@ -83,9 +83,9 @@ ___
 
 #### A/B Testing
 
-An A/B Test can be described as a randomised experiment containing two groups, A & B, that receive different experiences. Within an A/B Test, we look to understand and measure the response of each group - and the information from this helps drive future business decisions.
+An A/B Test can be described as a randomized experiment containing two groups, A & B, that receive different experiences. Within an A/B Test, we look to understand and measure the response of each group - and the information from this helps drive future business decisions.
 
-Application of A/B testing can range from testing different online ad strategies, different email subject lines when contacting customers, or testing the effect of mailing customers a coupon, vs a control group.  Companies like Amazon are running these tests in an almost never-ending cycle, testing new website features on randomised groups of customers...all with the aim of finding what works best so they can stay ahead of their competition.  Reportedly, Netflix will even test different images for the same movie or show, to different segments of their customer base to see if certain images pull more viewers in.
+Application of A/B testing can range from testing different online ad strategies, different email subject lines when contacting customers, or testing the effect of mailing customers a coupon, vs a control group.  Companies like Amazon are running these tests in an almost never-ending cycle, testing new website features on randomized groups of customers...all with the aim of finding what works best so they can stay ahead of their competition.  Reportedly, Netflix will even test different images for the same movie or show, to different segments of their customer base to see if certain images pull more viewers in.
 
 
 #### Hypothesis Testing
@@ -111,14 +111,14 @@ In a Hypothesis Test, before we collect any data or run any numbers - we specify
 
 Conventionally, we set our Acceptance Criteria to 0.05 - but this does not have to be the case.  If we need to be more confident that something did not occur through chance alone, we could lower this value down to something much smaller, meaning that we only come to the conclusion that the outcome was special or rare if it’s extremely rare.
 
-So to summarise, in a Hypothesis Test, we test the Null Hypothesis using a p-value and then decide its fate based on the Acceptance Criteria.
+So to summarize, in a Hypothesis Test, we test the Null Hypothesis using a p-value and then decide its fate based on the Acceptance Criteria.
 
 
 **Types Of Hypothesis Test**
 
 There are many different types of Hypothesis Tests, each of which is appropriate for use in differing scenarios - depending on a) the type of data that you’re looking to test and b) the question that you’re asking of that data.
 
-In the case of our task here, where we are looking to understand the difference in sign-up *rate* between two groups - we will utilise the Chi-Square Test For Independence.
+In the case of our task here, where we are looking to understand the difference in sign-up *rate* between two groups - we will utilize the Chi-Square Test For Independence.
 
 
 #### Chi-Square Test For Independence
@@ -200,7 +200,7 @@ ___
 
 The very first thing we need to do in any form of Hypothesis Test is state our Null Hypothesis, our Alternate Hypothesis, and the Acceptance Criteria (more details on these in the section above)
 
-In the code below we code these in explicitly & clearly so we can utilise them later to explain the results.  We specify the common Acceptance Criteria value of 0.05.
+In the code below we code these in explicitly & clearly so we can utilize them later to explain the results.  We specify the common Acceptance Criteria value of 0.05.
 
 ```python
 # specify hypotheses & acceptance criteria for test
@@ -215,7 +215,7 @@ As mentioned in the section above, in a Chi-Square Test For Independence, the *o
 
 The below code:
 
-* Summarises our dataset to a 2x2 matrix for *signup_flag* by *mailer_type*
+* Summarizes our dataset to a 2x2 matrix for *signup_flag* by *mailer_type*
 * Based on this, calculates the:
     * Chi-Square Statistic
     * p-value
@@ -258,7 +258,7 @@ From this, we can see that the higher cost mailer does lead to a higher signup r
 
 We have a Chi-Square Statistic of **1.94** and a p-value of **0.16**.  The critical value for our specified Acceptance Criteria of 0.05 is **3.84**
 
-**Note** When applying the Chi-Square Test above, we use the parameter *correction = False* which means we are not applying what is known as the *Yates' Correction* which is applied when your Degrees of Freedom is equal to one.  This correction helps to prevent overestimation of statistical signficance in this case.
+**Note** When applying the Chi-Square Test above, we use the parameter *correction = False* which means we are not applying what is known as the *Yates' Correction* which is applied when your Degrees of Freedom is equal to one.  This correction helps to prevent overestimation of statistical significance in this case.
 
 ___
 
